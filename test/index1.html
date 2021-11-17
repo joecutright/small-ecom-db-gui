@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WF Tech Challenge</title>
+</head>
+
+<body>
+    <div>
+        <table id="data">
+            <colgroup>
+                <col class="one" />
+                <col class="two" />
+                <col class="three" />
+                <col class="four" />
+                <col class="five" />
+                <col class="six" />
+                <col class="seven" />
+                <col class="eight" />
+            </colgroup>
+            <tr>
+                <th onclick="sortTable(0)"><span class="glyphicon glyphicon-sort"></span>Order ID</th>
+                <th onclick="sortTable(1)"><span class="glyphicon glyphicon-sort"></span>Customer ID</th>
+                <th onclick="sortTable(2)"><span class="glyphicon glyphicon-sort"></span>First Name</th>
+                <th onclick="sortTable(3)"><span class="glyphicon glyphicon-sort"></span>Last Name</th>
+                <th onclick="sortTable(4)"><span class="glyphicon glyphicon-sort"></span>Address</th>
+            <tr></tr> id="hidden_row1" class=hidden_row>
+            <th>Street</th>
+            </tr>
+            <tr id="hidden_row2" class=hidden_row>
+                <th>City</th>
+            </tr>
+            <tr id="hidden_row3" class=hidden_row>
+                <th>State</th>
+            </tr>
+            <tr id="hidden_row4" class=hidden_row>
+                <th>Zip</th>
+            </tr>
+            <th onclick="sortTable(5)"><span class="glyphicon glyphicon-sort"></span>Order Number</th>
+            <th onclick="sortTable(6)"><span class="glyphicon glyphicon-sort"></span>Date</th>
+            <th onclick="sortTable(7)"><span class="glyphicon glyphicon-sort"></span>Items</th>
+            <th onclick="sortTable(8)"><span class="glyphicon glyphicon-sort"></span>Last Name</th>
+            <th onclick="sortTable(9)"><span class="glyphicon glyphicon-sort"></span>Last Name</th>
+            <th onclick="sortTable(10)"><span class="glyphicon glyphicon-sort"></span>Last Name</th>
+
+
+            </tr>
+        </table>
+    </div>
+    <script>
+        let data = [
+            {
+                order_id: uuid,
+                customer_id: uuid,
+                customer_first_name: string,
+                customer_last_name: string,
+                customer_address: {
+                    street: string,
+                    city: string,
+                    state: string,
+                    zip: number
+                },
+                order_amount: number,
+                order_date: timestamp,
+                order_items: [{
+                    id: uuid,
+                    name: string,
+                    description: string,
+                    price: currency,
+                    quantity: number
+                }],
+            }
+        ]
+        let table = document.getElementById('gable');
+        data.forEach(function (object) {
+            let tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + object.COUNTRY + '</td>' +
+                '<td>' + object.LoC + '</td>' +
+                '<td>' + object.BALANCE + '</td>' +
+                '<td>' + object.DATE + '</td>';
+            table.appendChild(tr);
+        });
+    </script>
+</body>
+
+</html>

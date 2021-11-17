@@ -1,0 +1,18 @@
+.body {
+    margin: 0;
+}
+
+.header {
+    background-color: green;
+    margin: 0;
+    
+    display: flex;
+}
+
+#table {
+    background-color: blue;
+}
+
+.footer {
+    background-color: green;
+}
